@@ -1,0 +1,19 @@
+@media(max-width:1300px){
+    .menu-navbar-nav{
+        width: auto;
+    }
+}
+@media(max-width:1230px){
+    .menu-navbar-nav{
+        margin: 0.5px;
+    }
+    .learn-more-btn{
+        padding: 12px 10px !important;
+    }
+}
+@media(max-width:1070px){
+    .nav-item .nav-link{
+        font-size: 16px;
+        
+    }
+}
