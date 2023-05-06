@@ -187,19 +187,19 @@
             <div class="container ">
                 <div class="row mb-2">
                     <div class="col-md-3  mt-4 mb-2 text-center">
-                        <h1 class="about-text-3">8,500</h1>
+                        <h1 class="about-text-3" id="count-1">8,500</h1>
                         <p>Completed Projects</p>
                     </div>
                     <div class="col-md-3 mt-4 mb-2 text-center">
-                        <h1 class="about-text-3">9,470</h1>
+                        <h1 class="about-text-3"  id="count-2">9,470</h1>
                         <p>Happy Clients</p>
                     </div>
                     <div class="col-md-3 mt-4 mb-2 text-center">
-                        <h1 class="about-text-3">1,120</h1>
+                        <h1 class="about-text-3"  id="count-3">1,120</h1>
                         <p>Ongoing Projects</p>
                     </div>
                     <div class="col-md-3 mt-4 mb-2 text-center">
-                        <h1 class="about-text-3">152</h1>
+                        <h1 class="about-text-3"  id="count-4">152</h1>
                         <p>Awards Won</p>
                     </div>
                 </div>
@@ -712,6 +712,33 @@
       duration: 1000,
 
     });
+  </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      function counter(id, start, end, duration) {
+        let obj = document.getElementById(id),
+          current = start,
+          range = end - start,
+          increment = end > start ? 1 : -1,
+          step = Math.abs(Math.floor(duration / range)),
+          timer = setInterval(() => {
+            current += increment;
+            obj.textContent = current;
+            if (current == end) {
+              clearInterval(timer);
+            }
+          }, step)
+      }
+      counter("count-1", 6300, 8500, 1000)
+      counter("count-2", 7700, 9470, 9000)
+      counter("count-3", 689, 1120, 9000)
+      counter("count-4", 7, 152, 9000)
+    })
+
+
+
+
   </script>
 </body>
 
